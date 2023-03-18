@@ -120,6 +120,11 @@ int Helicopter::_setThrottle(speedSelect speed) {
 int Helicopter::getMph() const { return speedo.getMph(); }
 
 //------------------------------------------------------------------------------
+// force fuel level to passed amount
+//------------------------------------------------------------------------------
+void Helicopter::setFuelLeft(int amount) { fg.setFuelAmount(amount); }
+
+//------------------------------------------------------------------------------
 // returns fuel left
 //------------------------------------------------------------------------------
 int Helicopter::getFuelLeft() const { return fg.getFuelGauge(); }
@@ -139,17 +144,3 @@ void Helicopter::setName(const string& _name) {	name = _name; }
 //------------------------------------------------------------------------------
 string Helicopter::getName() const { return name; }
 
-//------------------------------------------------------------------------------
-// force fuel level to passed amount
-//------------------------------------------------------------------------------
-void Helicopter::setFuelAmount(int amount) { fg.setFuelAmount(amount); }
-
-//------------------------------------------------------------------------------
-// return remaining fuel amount
-//------------------------------------------------------------------------------
-int Helicopter::getFuelAmount() const {	return fg.getFuelAmount(); }
-
-//------------------------------------------------------------------------------
-// app code determines fuel tank capacity
-//------------------------------------------------------------------------------
-void Helicopter::fillFuelTank(int amount) {	fg.setFuelAmount(amount); }

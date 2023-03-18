@@ -1,5 +1,5 @@
 //------------------------------------------------------------------------------
-// Helicopter.cpp : class declaration
+// Helicopter.h : class declaration
 //------------------------------------------------------------------------------
 #ifndef HELICOPTER_H
 #define HELICOPTER_H
@@ -61,17 +61,15 @@ public:
 	int getMph() const;
 	// get remaining fuel units
 	int getFuelLeft() const;
+	// force fuel tank level
+	void setFuelLeft(int);
+
 	// get enumerated flight status
 	HeloStatus getStatus() const;
 
 	// aircraft name
 	void setName(const string&);
 	string getName() const;
-
-	// force fuel tank level
-	void setFuelAmount(int);
-	int getFuelAmount() const;
-	void fillFuelTank(int);
 
 private: 
 	int _setThrottle(speedSelect);
