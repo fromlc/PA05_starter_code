@@ -50,7 +50,7 @@ int main() {
 
     for (int i = 0; i < NUM_HELOS; ++i) {
 // #TODO add this function to Helicopter and FuelGauge, then uncomment this call
-        h.setFuelAmount(rand() % 70 + 30);
+        h.setFuelLeft(rand() % 70 + 30);
 
 // #TODO add this function to Helicopter, then uncomment this call
         h.setName(heloNames[i]);
@@ -75,7 +75,7 @@ int main() {
 
     // insert another Helicopter at index 2
 // #TODO add this function to Helicopter, then uncomment this call
-    h.setFuelAmount(500);
+    h.setFuelLeft(500);
 // #TODO add this function to Helicopter, then uncomment this call
     h.setName("TEST at index 2");
     vHelos.insert(it + 2, h);
@@ -85,7 +85,7 @@ int main() {
 
     // insert another Helicopter at index 0
 // #TODO add this function to Helicopter and FuelGauge, then uncomment this call
-    h.fillFuelTank(5);
+    h.setFuelLeft(5);
 // #TODO add this function to Helicopter, then uncomment this call
     h.setName("TEST at index 3");
     vHelos.insert(it + 3, h);
